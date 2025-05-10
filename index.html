@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>All Jammed Up</title>
+  <link rel="icon" type="image/png" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
@@ -39,12 +40,12 @@
     .tagline {
       font-size: 1.2rem;
       color: #aaa;
-      margin-bottom: 2rem;
+      margin-bottom: 0.75rem;
       font-style: italic;
     }
 
     .festival {
-      margin-top: 3rem;
+      margin-top: 1.5rem;
       background: #111;
       border: 2px solid #ffd700;
       padding: 2rem;
@@ -90,55 +91,21 @@
       font-weight: bold;
     }
 
-    .podcast {
-      margin-top: 3rem;
-      max-width: 600px;
-      width: 100%;
-    }
-
-    .podcast h2 {
-      color: #ffd700;
-      font-family: 'Orbitron', sans-serif;
-      margin-bottom: 1rem;
-    }
-
-    .instagram {
-      margin-top: 3rem;
-      max-width: 100%;
-      width: 100%;
-    }
-
-    .instagram h2 {
-      color: #ffd700;
-      font-family: 'Orbitron', sans-serif;
-      margin-bottom: 1.5rem;
-    }
-
-    .instagram-wrapper {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      gap: 30px;
-      overflow-x: auto;
-      padding-bottom: 1rem;
-    }
-
-    .instagram-wrapper blockquote {
-      min-width: 300px;
-      max-width: 300px;
-      flex: 0 0 auto;
-    }
-
-    .youtube {
+    .media-section {
       margin-top: 3rem;
       max-width: 800px;
       width: 100%;
     }
 
-    .youtube h2 {
+    .media-section h2 {
       color: #ffd700;
       font-family: 'Orbitron', sans-serif;
       margin-bottom: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 12px;
     }
 
     .socials {
@@ -173,33 +140,27 @@
   <section class="festival">
     <h2>🎉 All Jammed Up Festival – Asheville</h2>
     <p class="event-date">Saturday, July 19, 2025<br>1:00 PM – 7:00 PM</p>
-    <p class="event-location">One World Brewing – West, Asheville, NC</p>
+    <p class="event-location">
+      One World Brewing – West<br>
+      520 Haywood Road<br>
+      Asheville, North Carolina 28806
+    </p>
     <div class="countdown" id="countdown">Loading countdown...</div>
     <a href="https://simpletix.com/e/all-jammed-up-tickets-212015#location" target="_blank" class="ticket-button">🎟️ Buy Tickets</a>
   </section>
 
-  <section class="podcast">
+  <section class="media-section podcast">
     <h2>🎧 Listen to the Podcast</h2>
-    <iframe style="border-radius:12px"
-      src="https://open.spotify.com/embed/show/0gfkyLqlQrp14bB0BpM5km?utm_source=generator"
-      width="100%" height="232" frameborder="0"
+    <iframe src="https://open.spotify.com/embed/show/0gfkyLqlQrp14bB0BpM5km?utm_source=generator"
+      height="232" frameborder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
     </iframe>
   </section>
 
-  <section class="instagram">
-    <h2>📸 On Instagram</h2>
-    <div class="instagram-wrapper">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DH3sOgssGHD/" data-instgrm-version="14" style="background:#000; border:none; margin:0 auto;"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DHOoFczufJj/" data-instgrm-version="14" style="background:#000; border:none; margin:0 auto;"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGa8nvUugLq/" data-instgrm-version="14" style="background:#000; border:none; margin:0 auto;"></blockquote>
-    </div>
-  </section>
-
-  <section class="youtube">
+  <section class="media-section youtube">
     <h2>🎥 Watch the Latest Episode</h2>
-    <iframe width="100%" height="315"
+    <iframe height="315"
       src="https://www.youtube.com/embed/qZ-dWngMPAE"
       title="YouTube video player"
       frameborder="0"
@@ -242,8 +203,5 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
-
-  <!-- Instagram Embed Script -->
-  <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
