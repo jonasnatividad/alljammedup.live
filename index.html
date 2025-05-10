@@ -102,6 +102,45 @@
       margin-bottom: 1rem;
     }
 
+    .instagram {
+      margin-top: 3rem;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .instagram h2 {
+      color: #ffd700;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1.5rem;
+    }
+
+    .instagram-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 30px;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+
+    .instagram-wrapper blockquote {
+      min-width: 300px;
+      max-width: 300px;
+      flex: 0 0 auto;
+    }
+
+    .youtube {
+      margin-top: 3rem;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .youtube h2 {
+      color: #ffd700;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+    }
+
     .socials {
       margin-top: 3rem;
     }
@@ -149,6 +188,26 @@
     </iframe>
   </section>
 
+  <section class="instagram">
+    <h2>📸 On Instagram</h2>
+    <div class="instagram-wrapper">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DH3sOgssGHD/" data-instgrm-version="14" style="background:#000; border:none; margin:0 auto;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DHOoFczufJj/" data-instgrm-version="14" style="background:#000; border:none; margin:0 auto;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGa8nvUugLq/" data-instgrm-version="14" style="background:#000; border:none; margin:0 auto;"></blockquote>
+    </div>
+  </section>
+
+  <section class="youtube">
+    <h2>🎥 Watch the Latest Episode</h2>
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/qZ-dWngMPAE"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </section>
+
   <div class="socials">
     <a href="https://www.instagram.com/alljammedup_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
     <a href="https://open.spotify.com/show/0gfkyLqlQrp14bB0BpM5km?si=b0144dcd472246f9" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
@@ -183,5 +242,8 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
+
+  <!-- Instagram Embed Script -->
+  <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
