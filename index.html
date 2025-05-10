@@ -59,8 +59,55 @@
       background: #e6c200;
     }
 
+    .festival {
+      margin-top: 3rem;
+      background: #111;
+      border: 2px solid #ffd700;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .festival h2 {
+      color: #ffd700;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    .festival .event-date,
+    .festival .event-location {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin: 0.25rem 0 1rem 0;
+    }
+
+    .ticket-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #ffd700;
+      color: #000;
+      font-weight: bold;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .ticket-button:hover {
+      background: #e6c200;
+    }
+
+    .countdown {
+      margin: 1.25rem 0;
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: bold;
+    }
+
     .socials {
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     .socials a {
@@ -89,6 +136,14 @@
   <div class="tagline">A Music Festival + Podcast Experience</div>
   <a href="#" class="button">Notify Me</a>
 
+  <section class="festival">
+    <h2>🎉 All Jammed Up Festival – Asheville</h2>
+    <p class="event-date">Saturday, July 19, 2025<br>1:00 PM – 7:00 PM</p>
+    <p class="event-location">One World Brewing – West, Asheville, NC</p>
+    <div class="countdown" id="countdown">Loading countdown...</div>
+    <a href="https://simpletix.com/e/all-jammed-up-tickets-212015#location" target="_blank" class="ticket-button">🎟️ Buy Tickets</a>
+  </section>
+
   <div class="socials">
     <a href="https://www.instagram.com/alljammedup_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
     <a href="https://open.spotify.com/show/0gfkyLqlQrp14bB0BpM5km?si=b0144dcd472246f9" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
@@ -98,5 +153,30 @@
   <footer>
     <p>© 2025 All Jammed Up. Built with good vibes and GitHub.</p>
   </footer>
+
+  <script>
+    const countdownEl = document.getElementById('countdown');
+    const targetDate = new Date('July 19, 2025 13:00:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdownEl.innerHTML = "🎉 It's festival time!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownEl.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
 </html>
