@@ -10,7 +10,7 @@
   <style>
     body {
       margin: 0;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
+      background: #000000;
       font-family: 'Open Sans', sans-serif;
       color: #fff;
       display: flex;
@@ -93,7 +93,8 @@
 
     .media-section {
       margin-top: 3rem;
-      max-width: 800px;
+      margin-bottom: 2rem;
+      max-width: 900px;
       width: 100%;
     }
 
@@ -103,8 +104,31 @@
       margin-bottom: 1rem;
     }
 
-    iframe {
+    .spotify-embed iframe {
       width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .youtube-embed-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .youtube-embed-wrapper iframe {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
+
+    iframe {
       border-radius: 12px;
     }
 
@@ -164,10 +188,12 @@
     <a href="https://simpletix.com/e/all-jammed-up-tickets-212015#location" target="_blank" class="ticket-button">🎟️ Buy Tickets</a>
   </section>
 
-  <section class="media-section podcast">
+  <section class="media-section podcast spotify-embed">
     <h2>🎧 Listen to the Podcast</h2>
-    <iframe src="https://open.spotify.com/embed/show/0gfkyLqlQrp14bB0BpM5km?utm_source=generator"
-      height="232" frameborder="0"
+    <iframe 
+      src="https://open.spotify.com/embed/show/0gfkyLqlQrp14bB0BpM5km?utm_source=generator"
+      height="232" 
+      frameborder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
     </iframe>
@@ -175,12 +201,24 @@
 
   <section class="media-section youtube">
     <h2>🎥 Watch the Latest Episode</h2>
-    <iframe height="315"
-      src="https://www.youtube.com/embed/qZ-dWngMPAE"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
+    <div class="youtube-embed-wrapper">
+      <iframe 
+        width="900" 
+        height="500" 
+        src="https://rss.app/embed/v1/imageboard/8LiWNN6FDtRW8Ywz" 
+        frameborder="0">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="media-section instagram">
+    <h2>📸 Explore the Feed</h2>
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+    <iframe src="//lightwidget.com/widgets/f23b006410795771943b2bb332998eb1.html"
+            scrolling="no"
+            allowtransparency="true"
+            class="lightwidget-widget"
+            style="width:100%;border:0;overflow:hidden;">
     </iframe>
   </section>
 
@@ -192,7 +230,6 @@
 
   <footer>
     <div class="nativ-works-credit">
-      <img src="nativ_works_logo.png" alt="Nativ-Works Logo" />
       <span>Website & analytics by <strong>Nativ-Works</strong></span>
     </div>
     <p>© 2025 All Jammed Up. Built with good vibes and GitHub.</p>
