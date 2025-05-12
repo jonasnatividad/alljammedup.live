@@ -112,7 +112,8 @@
       border-radius: 12px;
     }
 
-    .youtube-embed-wrapper {
+    .youtube-embed-wrapper,
+    .instagram-embed-wrapper {
       display: flex;
       justify-content: center;
       margin: 0 auto;
@@ -121,7 +122,8 @@
       overflow: hidden;
     }
 
-    .youtube-embed-wrapper iframe {
+    .youtube-embed-wrapper iframe,
+    .instagram-embed-wrapper iframe {
       display: block;
       max-width: 100%;
       margin: 0 auto;
@@ -213,13 +215,14 @@
 
   <section class="media-section instagram">
     <h2>📸 Explore the Feed</h2>
-    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-    <iframe src="//lightwidget.com/widgets/f23b006410795771943b2bb332998eb1.html"
-            scrolling="no"
-            allowtransparency="true"
-            class="lightwidget-widget"
-            style="width:100%;border:0;overflow:hidden;">
-    </iframe>
+    <div class="instagram-embed-wrapper">
+      <iframe 
+        width="900" 
+        height="500" 
+        src="https://rss.app/embed/v1/imageboard/nZhuvFHi4y3mCURY" 
+        frameborder="0">
+      </iframe>
+    </div>
   </section>
 
   <div class="socials">
